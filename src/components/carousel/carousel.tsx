@@ -11,7 +11,7 @@ import {
 export function CarouselDemo() {
   return (
     <div className="flex flex-col items-center md:translate-y-[-380px] translate-y-0 sm:ml-0 md:ml-32 lg:ml-60 px-4">
-      <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+      <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm">
         <CarouselContent className="flex items-center">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="flex justify-center">
