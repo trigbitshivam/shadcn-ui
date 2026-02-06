@@ -26,7 +26,6 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 
-// This is sample data.
 const data = {
   user: {
     name: "shadcn",
@@ -51,6 +50,18 @@ const data = {
     },
   ],
   navMain: [
+    {
+      title: "User",
+      url: "#",
+      icon: SquareTerminal,
+      isActive: true,
+      items: [
+        {
+          title: "users",
+          url: "/users",
+        },
+      ],
+    },
     {
       title: "Playground",
       url: "#",

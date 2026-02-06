@@ -4,19 +4,28 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { NavigationMenuDemo } from "./components/navigation/Navbar";
 import { CardDemo } from "./components/card/card";
 import { CarouselDemo } from "./components/carousel/carousel";
+import { ThemeProvider } from "./components/dark/theme-provider";
+import { Route, Routes } from "react-router-dom";
+import UserList from "./components/user/userlist";
 
 function App() {
   return (
-    <SidebarProvider>
-      <AppSidebar />
-
-      <main className=" flex-1 min-h-screen overflow-x-hidden">
-        <NavigationMenuDemo />
-        <SidebarTrigger />
-        <CardDemo />
-        <CarouselDemo />
-      </main>
-    </SidebarProvider>
+    <>
+      <SidebarProvider>
+        <AppSidebar />
+        <ThemeProvider>
+          <main className=" flex-1 min-h-screen overflow-x-hidden">
+            <NavigationMenuDemo />
+            <Routes>
+              <Route path="/users" element={<UserList />} />
+            </Routes>
+            <SidebarTrigger />
+            <CardDemo />
+            <CarouselDemo />
+          </main>
+        </ThemeProvider>
+      </SidebarProvider>
+    </>
   );
 }
 
