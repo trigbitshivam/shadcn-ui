@@ -14,14 +14,23 @@ function App() {
       <SidebarProvider>
         <AppSidebar />
         <ThemeProvider>
-          <main className=" flex-1 min-h-screen overflow-x-hidden">
+          <main className="flex-1 min-h-screen overflow-x-hidden">
             <NavigationMenuDemo />
+            <SidebarTrigger />
+
             <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <CardDemo />
+                    <CarouselDemo />
+                  </>
+                }
+              />
+
               <Route path="/users" element={<UserList />} />
             </Routes>
-            <SidebarTrigger />
-            <CardDemo />
-            <CarouselDemo />
           </main>
         </ThemeProvider>
       </SidebarProvider>
