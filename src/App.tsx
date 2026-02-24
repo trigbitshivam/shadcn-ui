@@ -7,6 +7,7 @@ import { CarouselDemo } from "./components/carousel/carousel";
 import { ThemeProvider } from "./components/dark/theme-provider";
 import { Route, Routes } from "react-router-dom";
 import UserList from "./components/user/userlist";
+import EmployeeForm from "./components/typescript/EmployeeForm";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               />
 
               <Route path="/users" element={<UserList />} />
+              <Route path="/typescript" element={<EmployeeForm />} />
             </Routes>
           </main>
         </ThemeProvider>

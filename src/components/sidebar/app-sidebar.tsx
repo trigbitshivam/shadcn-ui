@@ -63,6 +63,18 @@ const data = {
       ],
     },
     {
+      title: "typescript",
+      url: "#",
+      icon: SquareTerminal,
+      isActive: true,
+      items: [
+        {
+          title: "typescript",
+          url: "/typescript",
+        },
+      ],
+    },
+    {
       title: "Playground",
       url: "#",
       icon: SquareTerminal,
